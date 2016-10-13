@@ -5,6 +5,7 @@ var { Image } = require('react-native');
 var ResponsiveImage = React.createClass({
     setNativeProps: function(nativeProps) {
         this._root.setNativeProps(nativeProps);
+        this.props = Image.props
     },
     render: function () {
         var width = Math.ceil(this.props.initWidth * Device.scale);
